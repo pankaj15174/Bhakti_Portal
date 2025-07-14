@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+    <header>
+        <h1 class = "Title">My Tasks</h1>
+        <button id="themeToggleBtn" style="position: absolute; top: 15px; right: 20px; padding: 8px 15px; font-size: 0.9em;">Dark Mode</button>
+
+    </header>
+    <nav>
+        <ul class = "Main_Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jaap_counter.html">Jaap Counter</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="hanuman_chalisa.html">Hanuman Chalisa</a></li>
+            <li><a href="bengali_calendar.html">Bengali Calendar</a></li>
+        </ul>
+    </nav>
+    <main class="tasks-main">
+        <div class="task-input-section">
+            <h2>Add New Task</h2>
+            <div class="input-group">
+                <label for="taskDescription">Task:</label>
+                <input type="text" id="taskDescription" placeholder="e.g., Call client A">
+            </div>
+            <div class="input-group">
+                <label for="taskDate">Date (Optional):</label>
+                <input type="date" id="taskDate">
+            </div>
+            <div class="input-group">
+                <label for="taskTime">Time (Optional):</label>
+                <input type="time" id="taskTime">
+            </div>
+            <div class="input-group">
+                <label for="taskStatus">Status:</label>
+                <select id="taskStatus">
+                    <option value="created">Created</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="done">Done</option>
+                </select>
+            </div>
+            <div class="action-buttons">
+                <button id="addTaskBtn">Add Task</button>
+                <button id="addTomorrowTaskBtn">Add Task for Tomorrow</button>
+            </div>
+        </div>
+
+        <div class="task-board-section">
+            <h2>Your Tasks Overview</h2>
+            <div class="task-columns">
+                <div class="task-column">
+                    <h3>Created</h3>
+                    <div id="createdTasks" class="task-list-column">
+                        <p class="no-tasks-message">No tasks in 'Created'.</p>
+                    </div>
+                </div>
+                <div class="task-column">
+                    <h3>In Progress</h3>
+                    <div id="inProgressTasks" class="task-list-column">
+                        <p class="no-tasks-message">No tasks 'In Progress'.</p>
+                    </div>
+                </div>
+                <div class="task-column">
+                    <h3>Done</h3>
+                    <div id="doneTasks" class="task-list-column">
+                        <p class="no-tasks-message">No tasks 'Done'.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="tasks.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

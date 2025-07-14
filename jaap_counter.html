@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaap Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jaap_counter.css">
+</head>
+<body>
+    <header>
+        <h1 class = "Title">Jaap Counter</h1>
+        <button id="themeToggleBtn" style="position: absolute; top: 15px; right: 20px; padding: 8px 15px; font-size: 0.9em;">Dark Mode</button>
+    </header>
+    <nav>
+        <ul class = "Main_Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jaap_counter.html">Jaap Counter</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="hanuman_chalisa.html">Hanuman Chalisa</a></li> 
+            <li><a href="bengali_calendar.html">Bengali Calendar</a></li> 
+        </ul>
+    </nav>
+    <main>
+        <div class="jaap-container">
+            <div class="input-section">
+                <label for="jaapMessage">Jaap Message:</label>
+                <textarea id="jaapMessage" rows="4" placeholder="e.g., Hare Krishna"></textarea>
+            </div>
+            <div class="input-section">
+                <label for="targetCount">Target Count:</label>
+                <input type="number" id="targetCount" min="1" value="3"> <button id="startButton">Okay</button>
+            </div>
+            <div class="counter-section">
+                <p>Current Count: <span id="currentCount">0</span></p>
+                <p>Time: <span id="timeDisplay">0</span></p>
+                <button id="tapToCount">Tap to Count</button>
+            </div>
+            <audio id="bellSound" src="bell_sound.wav" preload="auto"></audio>
+        </div>
+    </main>
+
+    <script src="jaap_counter.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

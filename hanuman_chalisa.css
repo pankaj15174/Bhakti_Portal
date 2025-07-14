@@ -1,0 +1,88 @@
+/* hanuman_chalisa.css */
+
+.chalisa-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.controls-section {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.timer-inputs, .target-input {
+    margin-bottom: 15px;
+}
+
+.timer-inputs label, .target-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.timer-inputs input[type="number"],
+.target-input input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.controls-section button {
+    background-color: #007bff; /* Blue */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.controls-section button:hover {
+    background-color: #0056b3;
+}
+
+.controls-section button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.current-instance {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #555;
+}
+
+.chalisa-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: 400px; /* Fixed height for scrollable area */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    line-height: 1.6;
+    font-size: 1.1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center; /* Center the text */
+}
+
+.chalisa-content p {
+    margin-bottom: 0.8em; /* Spacing between lines/paragraphs */
+}

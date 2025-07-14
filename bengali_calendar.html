@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengali Calendar</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="bengali_calendar.css"> </head>
+<body>
+    <header>
+        <h1 class = "Title">Bengali Calendar</h1>
+        <button id="themeToggleBtn" style="position: absolute; top: 15px; right: 20px; padding: 8px 15px; font-size: 0.9em;">Dark Mode</button>
+    </header>
+    <nav>
+        <ul class = "Main_Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jaap_counter.html">Jaap Counter</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="hanuman_chalisa.html">Hanuman Chalisa</a></li> 
+            <li><a href="bengali_calendar.html">Bengali Calendar</a></li> 
+        </ul>
+    </nav>
+    <main class="calendar-main">
+        <div class="calendar-container">
+            <div class="calendar-nav">
+                <button id="prevMonth">&lt;</button>
+                <h2 id="currentMonthYear"></h2>
+                <button id="nextMonth">&gt;</button>
+            </div>
+
+            <div class="calendars-wrapper">
+                <div class="calendar" id="englishCalendar">
+                    <h3>English Calendar</h3>
+                    <table class="calendar-grid">
+                        <thead>
+                            <tr>
+                                <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div class="calendar" id="bengaliCalendar">
+                    <h3>Bengali Calendar</h3>
+                    <p id="bengaliMonthYear" class="bengali-month-display"></p>
+                    <table class="calendar-grid">
+                        <thead>
+                            <tr>
+                                <th>রবি</th><th>সোম</th><th>মঙ্গল</th><th>বুধ</th><th>বৃহঃ</th><th>শুক্র</th><th>শনি</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="event-description">
+                <h2>Event Details for <span id="selectedDateDisplay"></span></h2>
+                <div id="eventDetailsContent">
+                    <p>Click on a date to see its details.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="bengali_calendar.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+/* .Title{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+.Main_Menu{
+    background-color: yellowgreen;
+    display: flex;
+    gap: 30px;
+}
+.Main_Body{
+    text-align: center;
+} */
+
+/* style.css */
+
+/* Global CSS Variables (Light Mode Defaults) */
+:root {
+    --bg-color-primary: #f4f7f6; /* Main background for body */
+    --bg-color-secondary: #ffffff; /* Background for content sections (cards/containers) */
+    --text-color-primary: #333333; /* Main text color */
+    --text-color-secondary: #555555; /* Secondary text color, labels */
+    --border-color: #e0e0e0;
+    --header-bg-color: #222222;
+    --header-text-color: #ffffff;
+    --nav-bg-color: #7cb342; /* Your existing green */
+    --nav-text-color: #ffffff;
+    --button-bg-color: #007bff;
+    --button-text-color: #ffffff;
+    --input-bg-color: #ffffff;
+    --input-border-color: #cccccc;
+    --table-header-bg: #f2f2f2;
+    --table-border-color: #eee;
+    --highlight-color: #e6f2ff; /* For hover/selection */
+    --accent-color: #007bff; /* Primary accent for links, etc. */
+    --danger-color: #dc3545; /* Red for delete buttons */
+}
+
+/* Dark Mode Variables */
+:root.dark-mode {
+    --bg-color-primary: #282c36;
+    --bg-color-secondary: #3b404d;
+    --text-color-primary: #e0e0e0;
+    --text-color-secondary: #b0b0b0;
+    --border-color: #555555;
+    --header-bg-color: #1a1e26;
+    --header-text-color: #f0f0f0;
+    --nav-bg-color: #5c8b2f; /* Darker shade of your green */
+    --nav-text-color: #e0e0e0;
+    --button-bg-color: #6a8cff; /* Lighter blue for dark mode buttons */
+    --button-text-color: #ffffff;
+    --input-bg-color: #4a4e5a;
+    --input-border-color: #777777;
+    --table-header-bg: #4a4e5a;
+    --table-border-color: #666;
+    --highlight-color: #556688;
+    --accent-color: #9ac2ff;
+    --danger-color: #ff6b6b;
+}
+
+/* Apply Variables to Elements */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-primary); /* Use variable */
+    color: var(--text-color-primary); /* Use variable */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+header {
+    background-color: var(--header-bg-color); /* Use variable */
+    color: var(--header-text-color); /* Use variable */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative; /* For toggle button positioning */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    background-color: var(--nav-bg-color); /* Use variable */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--nav-text-color); /* Use variable */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--header-bg-color); /* Re-use header background */
+    color: var(--header-text-color); /* Re-use header text */
+    margin-top: 30px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* General button styling */
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(115%); /* Slightly brighter on hover */
+}
+
+button:disabled {
+    background-color: var(--input-border-color); /* Greyscale for disabled */
+    cursor: not-allowed;
+    filter: none;
+}
+
+/* General input styling */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea,
+select {
+    background-color: var(--input-bg-color);
+    color: var(--text-color-primary);
+    border: 1px solid var(--input-border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container backgrounds (e.g., in calendar, tasks, jaap counter) */
+.calendar-container,
+.jaap-container,
+.task-input-section,
+.task-board-section {
+    background-color: var(--bg-color-secondary);
+    color: var(--text-color-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific styling for elements within containers */
+.calendar-grid th,
+.task-column h3 {
+    background-color: var(--table-header-bg);
+    border-color: var(--table-border-color);
+    color: var(--text-color-primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-grid td {
+    border-color: var(--table-border-color);
+    color: var(--text-color-primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-grid td:hover {
+    background-color: var(--highlight-color);
+}
+
+.calendar-grid td.today {
+    background-color: var(--highlight-color);
+    border-color: var(--accent-color);
+}
+
+.calendar-grid td.selected {
+    background-color: var(--highlight-color);
+    border-color: var(--accent-color);
+}
+
+.calendar-grid td.empty {
+    background-color: var(--bg-color-primary); /* Match body background for empty cells */
+    color: var(--text-color-secondary);
+}
+
+.calendar-grid td .bengali-date {
+    color: var(--accent-color);
+}
+
+.task-item {
+    background-color: var(--input-bg-color); /* Lighter background for task items */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.task-item .delete-btn {
+    background-color: var(--danger-color);
+}
+.task-item .delete-btn:hover {
+    filter: brightness(115%);
+}
+
+.no-tasks-message,
+.iframe-note {
+    color: var(--text-color-secondary);
+}
+
+/* Specific for jaap counter current count */
+.counter-section p {
+    color: var(--text-color-primary);
+}
+
+.input-section button {
+    background-color: var(--accent-color); /* Re-using accent for these buttons */
+    color: var(--button-text-color);
+}
+.input-section button:hover {
+    filter: brightness(115%);
+}
+
+.counter-section #tapToCount {
+    background-color: var(--accent-color);
+}
+.counter-section #tapToCount:hover {
+    filter: brightness(115%);
+}

@@ -1,0 +1,193 @@
+/* bengali_calendar.css */
+
+.calendar-main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 120px); /* Adjust based on your header/footer height */
+}
+
+.calendar-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    width: 100%;
+    max-width: 900px; /* Adjust as needed */
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-nav h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.calendar-nav button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.calendar-nav button:hover {
+    background-color: #0056b3;
+}
+
+.calendars-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.calendar {
+    flex: 1;
+    min-width: 300px; /* Minimum width for each calendar */
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.calendar h3 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.bengali-month-display {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.calendar-grid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-grid th, .calendar-grid td {
+    padding: 10px 5px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.calendar-grid th {
+    background-color: #f2f2f2;
+    color: #666;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.calendar-grid td {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-height: 40px; /* Ensure consistent cell height */
+    vertical-align: middle;
+    position: relative;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.calendar-grid td:hover {
+    background-color: #e6f2ff; /* Light blue on hover */
+}
+
+.calendar-grid td.today {
+    background-color: #ffe0b2; /* Light orange for today */
+    border-color: #ff9800;
+}
+
+.calendar-grid td.selected {
+    background-color: #cce0ff; /* Darker blue for selected */
+    border: 2px solid #007bff;
+}
+
+.calendar-grid td.empty {
+    background-color: #f9f9f9;
+    cursor: default;
+    color: #ccc;
+}
+
+.calendar-grid td .english-date {
+    display: block;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.calendar-grid td .bengali-date {
+    display: block;
+    font-size: 0.8em;
+    color: #007bff; /* Blue for Bengali date */
+    margin-top: 2px;
+}
+
+/* Event marker */
+.calendar-grid td.has-event::after {
+    content: '•';
+    color: #f44336; /* Red dot */
+    font-size: 1.5em;
+    line-height: 0;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+.event-description {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.event-description h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.event-description p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.event-description strong {
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .calendars-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .calendar {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}

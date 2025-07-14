@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanuman Chalisa</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="hanuman_chalisa.css"> </head>
+<body>
+    <header>
+        <h1 class = "Title">Hanuman Chalisa</h1>
+        <button id="themeToggleBtn" style="position: absolute; top: 15px; right: 20px; padding: 8px 15px; font-size: 0.9em;">Dark Mode</button>
+    </header>
+    <nav>
+        <ul class = "Main_Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jaap_counter.html">Jaap Counter</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="hanuman_chalisa.html">Hanuman Chalisa</a></li> 
+            <li><a href="bengali_calendar.html">Bengali Calendar</a></li> 
+        </ul>
+    </nav>
+    <main class="chalisa-main">
+        <div class="controls-section">
+            <div class="timer-inputs">
+                <label for="minutes">Scroll Time:</label>
+                <input type="number" id="minutes" min="0" value="0" placeholder="Mins"> min
+                <input type="number" id="seconds" min="0" max="59" value="10" placeholder="Secs"> sec
+            </div>
+            <div class="target-input">
+                <label for="targetInstances">Target Times:</label>
+                <input type="number" id="targetInstances" min="1" value="1">
+            </div>
+            <button id="startButton">Start Chalisa</button>
+            <p class="current-instance">Current Instance: <span id="currentInstance">0</span></p>
+        </div>
+
+        <div class="chalisa-content" id="chalisaContent">
+            <p>Shri Guru Charan Saroj Raj, Nij Man Mukur Sudhari.</p>
+            <p>Barnau Raghuvar Bimal Jasu, Jo Dayak Phal Chari.</p>
+            <p>Buddhi heen Tanu Janike, Sumirau Pavan Kumar.</p>
+            <p>Bal Buddhi Vidya Dehu Mohi, Harahu Kalesh Vikar.</p>
+            <br>
+            <p>Jai Hanuman Gyan Gun Sagar.</p>
+            <p>Jai Kapis Tihu Lok Ujagar.</p>
+            <p>Ram Doot Atulit Bal Dhama.</p>
+            <p>Anjani Putra Pavan Sut Nama.</p>
+            <p>Mahabir Bikram Bajrangi.</p>
+            <p>Kumati Nivar Sumati Ke Sangi.</p>
+            <p>Kanchan Baran Biraj Subesa.</p>
+            <p>Kanan Kundal Kunchit Kesa.</p>
+            <br>
+            <p>Hath Bajra Aur Dhvaja Birajai.</p>
+            <p>Kandhe Moonj Janeu Sajai.</p>
+            <p>Shankar Suvan Kesari Nandan.</p>
+            <p>Tej Pratap Maha Jag Bandan.</p>
+            <p>Vidya Van Guni Ati Chatur.</p>
+            <p>Ram Kaj Karibe Ko Atur.</p>
+            <p>Prabhu Charitra Sunibe Ko Rasiya.</p>
+            <p>Ram Lakhan Sita Man Basiya.</p>
+            <br>
+            <p>Sukshma Roop Dhari Siyahi Dikhawa.</p>
+            <p>Bikat Roop Dhari Lank Jarawa.</p>
+            <p>Bhim Roop Dhari Asur Sanhare.</p>
+            <p>Ramchandra Ke Kaj Sanvare.</p>
+            <p>Lay Sanjivan Lakhan Jiyaye.</p>
+            <p>Shri Raghubir Harashi Ur Laye.</p>
+            <br>
+            <p>Raghupati Kinhi Bahut Badai.</p>
+            <p>Tum Mam Priya Bharat Hi Sam Bhai.</p>
+            <p>Sahas Badan Tumhro Jas Gaavein.</p>
+            <p>As Kahi Shri Pati Kanth Lagavein.</p>
+            <p>Sankadik Bramhadi Munisa.</p>
+            <p>Narad Sarad Sahit Ahisa.</p>
+            <p>Jam Kuber Digpal Jahan Te.</p>
+            <p>Kavi Kobid Kahi Sake Kahan Te.</p>
+            <br>
+            <p>Tum Upkar Sugreevahi Keenha.</p>
+            <p>Ram Milay Rajpad Deenha.</p>
+            <p>Tumhro Mantra Vibhishan Mana.</p>
+            <p>Lankeshwar Bhaye Sab Jag Jana.</p>
+            <p>Jug Sahasra Jojan Par Bhanu.</p>
+            <p>Leelyo Tahi Madhur Phal Janu.</p>
+            <br>
+            <p>Prabhu Mudrika Meli Mukh Mahi.</p>
+            <p>Jaladhi Ladhi Gaye Achraj Nahi.</p>
+            <p>Durgam Kaj Jagat Ke Jete.</p>
+            <p>Sugam Anugrah Tumhre Tete.</p>
+            <p>Ram Duare Tum Rakhvare.</p>
+            <p>Hot Na Agya Binu Paisare.</p>
+            <br>
+            <p>Sab Sukh Lahai Tumhari Sarna.</p>
+            <p>Tum Rakshak Kahu Ko Darna.</p>
+            <p>Aapan Tej Samharo Aapai.</p>
+            <p>Tino Lok Hank Te Kanpai.</p>
+            <p>Bhoot Pisach Nikat Nahi Avei.</p>
+            <p>Mahabir Jab Nam Sunavei.</p>
+            <p>Nase Rog Hare Sab Peera.</p>
+            <p>Japat Nirantar Hanuman Beera.</p>
+            <br>
+            <p>Sankat Te Hanuman Chudavei.</p>
+            <p>Man Kram Bachan Dhyan Jo Lavei.</p>
+            <p>Sab Par Ram Tapasvi Raja.</p>
+            <p>Tin Ke Kaj Sakal Tum Saja.</p>
+            <p>Aur Manorath Jo Koi Lavei.</p>
+            <p>Soi Amit Jivan Phal Pavei.</p>
+            <p>Charo Jug Partap Tumhara.</p>
+            <p>Hai Parsiddh Jagat Ujiyara.</p>
+            <br>
+            <p>Sadhu Sant Ke Tum Rakhvare.</p>
+            <p>Asur Nikandan Ram Dulare.</p>
+            <p>Ashta Siddhi Nav Niddhi Ke Data.</p>
+            <p>As Bar Deen Janaki Mata.</p>
+            <p>Ram Rasayan Tumhre Pasa.</p>
+            <p>Sada Raho Raghupati Ke Dasa.</p>
+            <br>
+            <p>Tumhre Bhajan Ram Ko Pavai.</p>
+            <p>Janam Janam Ke Dukh Bisravai.</p>
+            <p>Ant Kal Raghuvar Pur Jai.</p>
+            <p>Jahan Janm Hari Bhakt Kahai.</p>
+            <p>Aur Devta Chitt Na Dharai.</p>
+            <p>Hanumat Sei Sarva Sukh Karai.</p>
+            <br>
+            <p>Sankat Kate Mite Sab Peera.</p>
+            <p>Jo Sumire Hanumat Balbeera.</p>
+            <p>Jai Jai Jai Hanuman Gosai.</p>
+            <p>Kripa Karahu Gurudev Ki Nai.</p>
+            <p>Jo Sat Bar Path Kare Koi.</p>
+            <p>Chhutahi Bandi Maha Sukh Hoi.</p>
+            <br>
+            <p>Jo Yah Padhe Hanuman Chalisa.</p>
+            <p>Hoye Siddhi Sakhi Gaurisa.</p>
+            <p>Tulsidas Sada Hari Chera.</p>
+            <p>Kije Nath Hriday Mah Dera.</p>
+            <br>
+            <p>Pavan Tanay Sankat Haran, Mangal Murati Roop.</p>
+            <p>Ram Lakhan Sita Sahit, Hriday Basahu Sur Bhoop.</p>
+            </div>
+
+        <audio id="bellSound" src="bell_sound.wav" preload="auto"></audio>
+    </main>
+
+    <script src="hanuman_chalisa.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
