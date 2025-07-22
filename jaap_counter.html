@@ -9,38 +9,42 @@
 </head>
 <body>
     <header>
-        <h1 class = "Title">Jaap Counter</h1>
-        <button id="themeToggleBtn" style="position: absolute; top: 15px; right: 20px; padding: 8px 15px; font-size: 0.9em;">Dark Mode</button>
+        <h1>Jaap Counter</h1>
     </header>
     <nav>
-        <ul class = "Main_Menu">
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="jaap_counter.html">Jaap Counter</a></li>
-            <li><a href="tasks.html">Tasks</a></li>
-            <li><a href="hanuman_chalisa.html">Hanuman Chalisa</a></li> 
-            <li><a href="bengali_calendar.html">Bengali Calendar</a></li> 
+            <li><a href="#">Tasks</a></li>
+            <li><a href="hanuman_chalisa.html">Hanuman Chalisa</a></li>
+            <li><a href="bengali_calendar.html">Bengali Calendar</a></li>
+            <li><a href="jaadu.html">Jaadu</a></li>
         </ul>
     </nav>
     <main>
         <div class="jaap-container">
+            <div class="mode-selection">
+                <button id="voiceModeBtn" class="mode-btn active">Voice Mode</button>
+                <button id="tapModeBtn" class="mode-btn">Tap Mode</button>
+            </div>
+
             <div class="input-section">
-                <label for="jaapMessage">Jaap Message:</label>
+                <label for="jaapMessage">Jaap Message (for Voice Mode):</label>
                 <textarea id="jaapMessage" rows="4" placeholder="e.g., Hare Krishna"></textarea>
             </div>
             <div class="input-section">
                 <label for="targetCount">Target Count:</label>
-                <input type="number" id="targetCount" min="1" value="3"> <button id="startButton">Okay</button>
+                <input type="number" id="targetCount" min="1" value="108">
+                <button id="startButton">Start Jaap</button>
             </div>
             <div class="counter-section">
                 <p>Current Count: <span id="currentCount">0</span></p>
                 <p>Time: <span id="timeDisplay">0</span></p>
-                <button id="tapToCount">Tap to Count</button>
-            </div>
-            <audio id="bellSound" src="sound.mp3" preload="auto"></audio>
+                <button id="tapToCount" class="hidden">Tap to Count</button> </div>
+            <audio id="bellSound" src="bell_sound.wav" preload="auto"></audio>
         </div>
     </main>
 
     <script src="jaap_counter.js"></script>
-    <script src="theme.js"></script>
 </body>
 </html>
