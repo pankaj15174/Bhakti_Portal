@@ -8,8 +8,8 @@
 }
 
 .controls-section {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: var(--bg-color-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -27,50 +27,62 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333;
+    color: var(--text-color-secondary);
 }
 
 .timer-inputs input[type="number"],
 .target-input input[type="number"] {
     width: 80px;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border-color);
     border-radius: 4px;
     font-size: 16px;
     text-align: center;
     margin: 0 5px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color-primary);
+}
+
+/* Button container for spacing */
+.action-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px;
+    flex-wrap: wrap; /* Allow buttons to wrap */
 }
 
 .controls-section button {
-    background-color: #007bff; /* Blue */
-    color: white;
+    background-color: var(--button-bg-color); /* Uses global var */
+    color: var(--button-text-color); /* Uses global var */
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1em;
-    margin-top: 10px;
+    transition: background-color 0.2s ease, filter 0.2s ease;
 }
 
 .controls-section button:hover {
-    background-color: #0056b3;
+    filter: brightness(115%);
 }
 
 .controls-section button:disabled {
-    background-color: #cccccc;
+    background-color: var(--input-border-color);
     cursor: not-allowed;
+    filter: none;
 }
 
 .current-instance {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 20px;
-    color: #555;
+    color: var(--text-color-primary);
 }
 
 .chalisa-content {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--bg-color-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     width: 100%;
@@ -80,9 +92,38 @@
     line-height: 1.6;
     font-size: 1.1em;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center; /* Center the text */
+    text-align: center;
+    color: var(--text-color-primary);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .chalisa-content p {
-    margin-bottom: 0.8em; /* Spacing between lines/paragraphs */
+    margin-bottom: 0.8em;
+}
+
+/* New: Hidden class for toggling buttons */
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .controls-section {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .timer-inputs input[type="number"] {
+        width: 60px;
+    }
+    .controls-section button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .action-buttons button {
+        width: 80%;
+    }
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaadu Page</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="jaadu.css"> </head>
+<body>
+    <header>
+        <h1 class = "Title">Jaadu</h1>
+        <button id="themeToggleBtn" style="position: absolute; top: 15px; right: 20px; padding: 8px 15px; font-size: 0.9em;">Dark Mode</button>
+    </header>
+    <nav>
+        <ul class = "Main_Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jaap_counter.html">Jaap Counter</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="hanuman_chalisa.html">Hanuman Chalisa</a></li>
+            <li><a href="bengali_calendar.html">Bengali Calendar</a></li>
+            <li><a href="jaadu.html">Jaadu</a></li>
+        </ul>
+    </nav>
+    <main class="jaadu-main">
+        <div class="jaadu-container">
+            <p class="instruction-text">Please Press</p>
+            <div id="displayLetter" class="display-letter">A</div>
+            <p id="completionMessage" class="completion-message hidden">You pressed all letters from A to Z! Amazing!</p>
+            <button id="resetButton" class="hidden">Start Over</button>
+        </div>
+    </main>
+
+    <audio id="sound01" src="01.mp3" preload="auto"></audio>
+    <audio id="sound02" src="02.mp3" preload="auto"></audio>
+    <audio id="sound03" src="03.mp3" preload="auto"></audio>
+    <audio id="sound04" src="04.mp3" preload="auto"></audio>
+
+    <script src="theme.js"></script>
+    <script src="jaadu.js"></script> </body>
+</html>
